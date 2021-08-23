@@ -1,18 +1,25 @@
 import React from "react";
 import { Grid, Paper } from "@material-ui/core";
+import store from "../store";
+import { useEffect } from "react";
+import { observer } from "mobx-react";
 
 const GameGardList = () => {
-  const items = ["item", "item", "item", "item"];
+  const { gameCardStore } = store;
+
+  useEffect(() => {
+    gameCardStore.getCards();
+  }, [gameCardStore]);
 
   return (
     <React.Fragment>
-      {items.map((item) => (
+      {gameCardStore.cards.map((gameCard) => (
         <Grid item xs={3}>
-          <Paper style={{ height: 400, marginTop: 20 }}></Paper>
+          <Paper style={{ height: 400, marginTop: 20 }}>{gameCard.title}</Paper>
         </Grid>
       ))}
     </React.Fragment>
   );
 };
 
-export default GameGardList;
+export default observer(GameGardList);
