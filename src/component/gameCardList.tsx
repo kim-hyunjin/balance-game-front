@@ -8,7 +8,7 @@ const GameGardList = () => {
   const { gameCardStore } = store;
 
   useEffect(() => {
-    gameCardStore.getCards();
+    gameCardStore.fetchCards();
   }, [gameCardStore]);
 
   return (
