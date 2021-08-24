@@ -1,5 +1,5 @@
-import gameCardStore from "./GameCardStore";
+import boardStore from "./BoardStore";
 
-const store = { gameCardStore };
+const store = { boardStore };
 
 export default store;

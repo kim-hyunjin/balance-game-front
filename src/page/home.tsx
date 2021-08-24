@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Grid } from "@material-ui/core";
 import SearchBar from "../component/searchbar";
-import GameGardList from "../component/gameCardList";
+import BoardList from "../component/boardList";
 
 export default function Home() {
   return (
@@ -11,7 +11,7 @@ export default function Home() {
         <Grid container spacing={1}>
           <Grid container item xs={12} spacing={3}>
             <SearchBar />
-            <GameGardList />
+            <BoardList />
           </Grid>
         </Grid>
       </Container>
