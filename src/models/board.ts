@@ -2,6 +2,7 @@ export type Board = {
     id: number;
     title: string;
     writer: string;
+    thumbnail?: string;
     description?: string;
     createdAt: string;
     contents: {

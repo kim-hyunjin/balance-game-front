@@ -1,0 +1,18 @@
+.boardList {
+    display: flex;
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 5rem;
+    text-align: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 1rem;
+}
+
+@media screen and (width < 600px) {
+    .boardList {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+}
